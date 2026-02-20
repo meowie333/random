@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Scan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: black;
+            color: #00ff00;
+            font-family: monospace;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .box {
+            border: 2px solid #00ff00;
+            padding: 30px;
+            width: 80%;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .hidden {
+            display: none;
+            margin-top: 20px;
+            color: white;
+            font-size: 18px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #00ff00;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>⚠ SYSTEM SCAN INITIATED ⚠</h2>
+    <p>Analyzing device...</p>
+    <p id="loading">Scanning files...</p>
+    <button onclick="startScan()">Continue</button>
+
+    <div id="result" class="hidden">
+        <p>⚠ Threat Detected ⚠</p>
+        <p>Problem: Excessive Handsomeness Found.</p>
+        <p>Status: Cannot Be Fixed.</p>
+        <p>Solution: Stay Awesome 😎</p>
+    </div>
+</div>
+
+<script>
+    function startScan() {
+        document.getElementById("loading").innerText = "Scanning photos...";
+        setTimeout(function() {
+            document.getElementById("loading").innerText = "Scanning personality...";
+        }, 1000);
+
+        setTimeout(function() {
+            document.getElementById("result").style.display = "block";
+        }, 2000);
+    }
+</script>
+
+</body>
+</html>
