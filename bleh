@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cheer Up!</title>
+
+<style>
+body{
+    background: linear-gradient(135deg,#ffd6e7,#d6f5ff);
+    font-family: Arial, sans-serif;
+    text-align:center;
+    padding-top:100px;
+}
+
+h1{
+    font-size:40px;
+}
+
+button{
+    padding:15px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#ff6b9c;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff3f7f;
+}
+
+#message{
+    margin-top:30px;
+    font-size:22px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Hey You! 🌟</h1>
+<p>If you're feeling sad, press the button.</p>
+
+<button onclick="cheer()">Click for Happiness</button>
+
+<div id="message"></div>
+
+<script>
+function cheer(){
+    const messages = [
+        "You matter more than you know 💛",
+        "Bad days don't last forever ☀️",
+        "Someone thinks you're awesome (me) 😎",
+        "Your smile is powerful 😊",
+        "You survived 100% of your bad days so far 💪",
+        "A random website believes in you 🚀"
+    ];
+
+    const random = messages[Math.floor(Math.random()*messages.length)];
+    document.getElementById("message").innerText = random;
+}
+</script>
+
+</body>
+</html>
